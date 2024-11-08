@@ -1,0 +1,154 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.navbar {
+    background-color: #0f0022;
+    color: #e0afe7;
+    padding: 20px 0;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.site-title {
+    font-size: 2.2em;
+    margin-bottom: 10px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.nav-links li a {
+    color: #ddd;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 10px;
+    transition: color 0.3s ease;
+    font-size: 20px;
+    font-family: "Caveat", cursive;
+
+}
+
+.nav-links li a:hover {
+    color: #fff;
+}
+
+/* Main container */
+.container {
+    display: flex;
+    max-width: 1200px;
+    margin: 40px auto;
+    background-color: #ffd4ec;
+    box-shadow: 0 4px 8px rgba(245, 117, 226, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Sidebar styling */
+.sidebar {
+    flex: 1;
+    background-color: #0f0022;
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-pic {
+    width: 500px;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.sidebar h1 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    font-family: "Caveat", cursive;
+}
+
+.short-bio {
+    font-size: 1em;
+    color: #ffffff;
+    font-style: italic;
+    max-width: 180px;
+    margin-top: 10px;
+    font-family: "Caveat", cursive;
+}
+
+/* Main content area */
+.content {
+    flex: 2;
+    padding: 50px 60px;
+    background-image: url(p2.jpg);
+}
+
+.content section {
+    margin-bottom: 30px;
+}
+
+.content h2 {
+    font-size: 1.8em;
+    color: #39071b;
+    margin-bottom: 15px; 
+    font-family: "Caveat", cursive;
+}
+
+.content p,
+.content ul {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #555;
+    font-family: "Caveat", cursive;
+}
+
+.content ul {
+    list-style-type: square;
+    padding-left: 20px;
+}
+
+.content ul li {
+    margin-bottom: 8px;
+}
+
+/* Contact button */
+.contact-button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 12px 25px;
+    background-color: #f78ce0;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.contact-button:hover {
+    background-color: #555;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        padding: 30px 20px;
+    }
+
+    .content {
+        padding: 30px 20px;
+    }
+}
