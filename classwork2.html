@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factorial Last Two Digits</title>
+</head>
+<body>
+    <h2>Last Two Digits of Factorial</h2>
+
+    <!-- Button to calculate factorial -->
+    <button onclick="findLastTwoDigits()">Get Last Two Digits</button>
+
+    <!-- Display result here -->
+    <p id="result"></p>
+
+    <!-- JavaScript code -->
+    <script type="text/javascript">
+        function findLastTwoDigits() {
+            let num = 5; // Your matric number is 05
+            let factorial = 1;
+
+            // Calculate factorial of the number
+            for (let i = 1; i <= num; i++) {
+                factorial *= i;
+            }
+
+            // Get last two digits
+            let lastTwoDigits = factorial % 100;
+
+            // Display the result
+            document.getElementById("result").textContent = "The last two digits of " + num + "! are: " + lastTwoDigits;
+        }
+    </script>
+</body>
+</html>
