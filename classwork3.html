@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <title>Combination Calculation</title>
+</head>
+<body>
+    <h2>Calculate Combination</h2>
+
+    <!-- Button to calculate the combination -->
+    <button onclick="calculateCombination()">Calculate Combination</button>
+
+    <!-- Display results here -->
+    <p id="result"></p>
+    <p id="condition"></p>
+    <p id="correlation"></p>  <!-- New paragraph for correlation explanation -->
+
+    <!-- JavaScript code -->
+    <script type="text/javascript">
+        function calculateCombination() {
+            let X = 0;  // Set X = 0
+            let Y = 5;  // Set Y = 5
+
+            // Function to calculate nCr (Combination)
+            function combination(n, r) {
+                if (r > n) return 0; // If r > n, combination is 0
+                let numerator = 1;
+                let denominator = 1;
+                for (let i = 0; i < r; i++) {
+                    numerator *= (n - i);
+                    denominator *= (i + 1);
+                }
+                return numerator / denominator;
+            }
+
+            // Check the conditions
+            let result;
+            let conditionMessage = "";
+            let correlationMessage = "";
+
+            if (X > Y) {
+                result = combination(X, Y);
+                conditionMessage = "Condition: X > Y. Calculating X combination Y.";
+                correlationMessage = "This doesn't correlate with my matric number, because X is not greater than Y in this case.";
+            } else if (Y > X) {
+                // This correlates with my matric number because X=0 and Y=5
+                result = combination(Y, X);
+                conditionMessage = "Condition: Y > X. This correlates with my matric number because X=0 and Y=5. Calculating Y combination X.";
+                correlationMessage = "This is the condition that correlates with my matric number.";
+            } else {
+                result = combination(X + 1, Y);
+                conditionMessage = "Condition: X == Y. Calculating (X+1) combination Y.";
+                correlationMessage = "This doesn't correlate with my matric number, because X and Y are not equal in this case.";
+            }
+
+            // Display the result, condition message, and correlation explanation
+            document.getElementById("result").textContent = "The result is: " + result;
+            document.getElementById("condition").textContent = conditionMessage;
+            document.getElementById("correlation").textContent = correlationMessage;
+        }
+    </script>
+</body>
+</html>
